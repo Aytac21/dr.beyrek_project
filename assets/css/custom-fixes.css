@@ -478,7 +478,7 @@ table th {
 
   /* ===== HEADER - compact on mobile ===== */
   .cs_site_header.cs_style_1 .cs_main_header_in {
-    height: 46px !important;
+    height: 60px !important;
   }
 
   .cs_site_branding img {
@@ -587,9 +587,10 @@ table th {
 
   /* ===== HERO SECTION ===== */
   .cs_hero.cs_style_1 {
-    min-height: 350px !important;
-    max-height: 500px;
-    padding: 80px 0 40px !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 75px 0 35px !important;
   }
 
   .cs_hero_content {
@@ -1776,8 +1777,8 @@ table th {
 
   /* Hero */
   .cs_hero.cs_style_1 {
-    min-height: 280px !important;
-    padding: 70px 0 30px !important;
+    min-height: auto !important;
+    padding: 65px 0 25px !important;
   }
 
   .cs_hero_subtitle {
