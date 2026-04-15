@@ -1,7 +1,9 @@
 /*--------------------------------------------------------------
   ** Google Fonts Integration
 ----------------------------------------------------------------*/
-/** Roboto **/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/** Roboto (legacy fallback) **/
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
@@ -21,14 +23,14 @@
   font-style: normal;
 }
 
-/** Jost **/
+/** Jost (legacy fallback) **/
 @font-face {
   font-family: 'Jost';
   src: url('../fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype');
   font-style: normal;
 }
 
-/** Marcellus **/
+/** Marcellus (legacy fallback) **/
 @font-face {
   font-family: 'Marcellus';
   src: url('../fonts/Marcellus/Marcellus-Regular.ttf') format('truetype');
