@@ -36,8 +36,8 @@
   --gray-color: #ebeced;
   --gray2-color: #e6f1f7;
   --border-color: rgb(0 0 27 / 30%);
-  --heading-font: "Jost", sans-serif;
-  --body-font: "Roboto", sans-serif;
+  --heading-font: "Inter", sans-serif;
+  --body-font: "Inter", sans-serif;
 }
 
 .cs_theme_2 {
@@ -6844,7 +6844,7 @@ a.ui-button:active,
   color: rgba(255, 255, 255, 0.8);
 }
 .cs_hero.cs_style_1 .cs_hero_title {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .cs_hero.cs_style_1 .cs_hero_title span {
   background-color: var(--accent-color);
