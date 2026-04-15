@@ -6,17 +6,17 @@
    ========================================================================== */
 
 /* --- 1. FONT FIX: Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600;700;800&display=swap');
 
 /* Override CSS custom properties for fonts */
 :root {
-  --heading-font: 'Poppins', sans-serif;
-  --body-font: 'Inter', sans-serif;
+  --heading-font: 'Jost', sans-serif;
+  --body-font: 'Roboto', sans-serif;
 }
 
 .cs_theme_5 {
-  --heading-font: 'Poppins', serif;
-  --body-font: 'Inter', serif;
+  --heading-font: 'Jost', serif;
+  --body-font: 'Roboto', serif;
 }
 
 /* --- 2. TYPOGRAPHY & TEXT ORGANIZATION FIXES --- */
@@ -183,6 +183,96 @@ table th {
   letter-spacing: -0.01em;
 }
 
+/* --- DESKTOP CONTENT PAGE TYPOGRAPHY --- */
+/* Service detail */
+.cs_service_details h2 {
+  font-size: 32px;
+  line-height: 1.2em;
+  margin-bottom: 16px;
+}
+
+.cs_service_details h3 {
+  font-size: 24px;
+  line-height: 1.25em;
+  margin-bottom: 14px;
+}
+
+.cs_service_details p {
+  font-size: 16px;
+  line-height: 1.75em;
+  margin-bottom: 16px;
+}
+
+/* Blog post detail */
+.cs_post_details.cs_style_1 h2 {
+  font-size: 28px;
+  line-height: 1.25em;
+  margin-bottom: 14px;
+}
+
+.cs_post_details.cs_style_1 h3 {
+  font-size: 22px;
+  line-height: 1.3em;
+  margin-bottom: 12px;
+}
+
+.cs_post_details.cs_style_1 p {
+  font-size: 16px;
+  line-height: 1.75em;
+  margin-bottom: 20px;
+}
+
+.cs_post_details.cs_style_1 ul,
+.cs_post_details.cs_style_1 ol {
+  font-size: 16px;
+  line-height: 1.7em;
+  margin-bottom: 20px;
+}
+
+/* Diseases page boxes */
+.cs_iconbox.cs_style_1[style*="padding: 30px"] h3.cs_fs_24 {
+  font-size: 20px;
+  line-height: 1.3em;
+  margin-bottom: 8px;
+}
+
+.cs_iconbox.cs_style_1[style*="padding: 30px"] p {
+  font-size: 15px;
+  line-height: 1.7em;
+  margin-bottom: 8px;
+}
+
+/* Department details */
+.cs_department_details h2 {
+  font-size: 30px;
+  line-height: 1.2em;
+  margin-bottom: 16px;
+}
+
+.cs_department_details h3 {
+  font-size: 22px;
+  line-height: 1.3em;
+  margin-bottom: 12px;
+}
+
+.cs_department_details p {
+  font-size: 16px;
+  line-height: 1.75em;
+  margin-bottom: 16px;
+}
+
+/* Contact page info */
+.contact_form_wrapper.cs_type_1 p {
+  font-size: 15px;
+  line-height: 1.7em;
+}
+
+/* Sidebar card */
+.cs_card.cs_style_9 p {
+  font-size: 15px;
+  line-height: 1.6em;
+}
+
 
 /* --- SELECT2 DROPDOWN FIX (global) --- */
 .select2-container {
@@ -213,7 +303,7 @@ table th {
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
-  padding-right: 32px !important;
+  padding: 15px 32px 15px 20px !important;
   text-overflow: ellipsis !important;
   overflow: hidden !important;
   white-space: nowrap !important;
@@ -335,6 +425,26 @@ table th {
   .cs_process_item .cs_process_title {
     font-size: 14px !important;
   }
+
+  /* Content page typography - tablet */
+  .cs_service_details h2 { font-size: 26px; }
+  .cs_service_details h3 { font-size: 20px; }
+  .cs_service_details p { font-size: 15px; }
+
+  .cs_post_details.cs_style_1 h2 { font-size: 24px; }
+  .cs_post_details.cs_style_1 h3 { font-size: 20px; }
+  .cs_post_details.cs_style_1 p { font-size: 15px; margin-bottom: 16px; }
+
+  .cs_department_details h2 { font-size: 24px; }
+  .cs_department_details h3 { font-size: 20px; }
+  .cs_department_details p { font-size: 15px; }
+
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] h3.cs_fs_24 { font-size: 18px; }
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] p { font-size: 14px; }
+
+  .contact_form_wrapper .cs_form_field.cs_type_1 { font-size: 14px; }
+
+  .cs_card.cs_style_9 h3.cs_fs_30 { font-size: 20px; }
 }
 
 /* ---- Small Tablets & Large Phones (max-width: 767px) ---- */
@@ -366,10 +476,19 @@ table th {
   .cs_fs_18 { font-size: 13px !important; }
   .cs_fs_14 { font-size: 13px !important; }
 
-  /* ===== HEADER LOGO - smaller on mobile ===== */
+  /* ===== HEADER - compact on mobile ===== */
+  .cs_site_header.cs_style_1 .cs_main_header_in {
+    height: 60px !important;
+  }
+
   .cs_site_branding img {
-    max-height: 38px !important;
+    max-height: 36px !important;
     padding: 2px 5px !important;
+  }
+
+  .cs_main_header_right .cs_btn.cs_style_1 {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
   }
 
   /* ===== GLOBAL OVERFLOW PREVENTION ===== */
@@ -491,14 +610,23 @@ table th {
 
   .cs_hero_btn_group,
   .cs_hero_btns {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 8px !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 10px !important;
   }
 
-  .cs_hero_btns {
-    flex-direction: column !important;
-    gap: 8px !important;
+  .cs_hero_btns .cs_btn.cs_style_1 {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+  }
+
+  .cs_hero_btns .cs_btn.cs_style_1[style*="border"] {
+    border-width: 1.5px !important;
   }
 
   .cs_hero_patientbox,
@@ -1330,6 +1458,180 @@ table th {
   /* ===== SUPPORT BOX ===== */
   .cs_supportbox { padding: 10px !important; }
 
+  /* ===== BLOG POST DETAILS ===== */
+  .cs_post_details.cs_style_1 h2 {
+    font-size: 18px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_post_details.cs_style_1 h3 {
+    font-size: 16px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cs_post_details.cs_style_1 p {
+    font-size: 13px !important;
+    line-height: 1.65em !important;
+    margin-bottom: 14px !important;
+  }
+
+  .cs_post_details.cs_style_1 ul,
+  .cs_post_details.cs_style_1 ol {
+    font-size: 13px !important;
+    line-height: 1.6em !important;
+    padding-left: 18px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .cs_post_details.cs_style_1 ul li,
+  .cs_post_details.cs_style_1 ol li {
+    margin-bottom: 4px !important;
+  }
+
+  .cs_post_details.cs_style_1 img {
+    margin-bottom: 14px !important;
+  }
+
+  .cs_post_details.cs_style_1 .cs_post_meta {
+    gap: 10px !important;
+    font-size: 11px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_post_details.cs_style_1 blockquote {
+    padding: 14px !important;
+    font-size: 13px !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .cs_post_details.cs_style_1 blockquote img {
+    width: 24px !important;
+    min-width: 24px !important;
+  }
+
+  .cs_tag_list .cs_tag_link {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* ===== DISEASES PAGE ===== */
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] {
+    padding: 16px 12px !important;
+  }
+
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] h3.cs_fs_24 {
+    font-size: 15px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] p {
+    font-size: 12px !important;
+    line-height: 1.55em !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cs_iconbox.cs_style_1[style*="padding: 30px"] .cs_text_btn {
+    font-size: 12px !important;
+  }
+
+  /* Warning signal cards */
+  div[style*="background: #fff3f3"] {
+    padding: 12px 10px !important;
+    border-radius: 8px !important;
+  }
+
+  div[style*="background: #fff3f3"] div[style*="font-size: 32px"] {
+    font-size: 20px !important;
+    margin-bottom: 4px !important;
+  }
+
+  div[style*="background: #fff3f3"] p {
+    font-size: 12px !important;
+    line-height: 1.4em !important;
+  }
+
+  /* Risk factor items */
+  div[style*="background: #f5f5f5"],
+  div[style*="background: #eef6ff"] {
+    padding: 12px 10px !important;
+    border-radius: 8px !important;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+  .contact_form_wrapper .cs_section_title.cs_fs_40 {
+    font-size: 18px !important;
+  }
+
+  .contact_form_wrapper .cs_form_field.cs_type_1 {
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+  }
+
+  .contact_form_wrapper.cs_type_1 h3.cs_fs_24 {
+    font-size: 16px !important;
+  }
+
+  .contact_form_wrapper.cs_type_1 p {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .cs_sidebar .cs_sidebar_widget {
+    margin-bottom: 14px !important;
+  }
+
+  .cs_btn_list li a {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  .cs_card.cs_style_9 {
+    padding: 14px 12px !important;
+  }
+
+  .cs_card.cs_style_9 h4.cs_fs_24 {
+    font-size: 14px !important;
+  }
+
+  .cs_card.cs_style_9 h3.cs_fs_30 {
+    font-size: 16px !important;
+    line-height: 1.3em !important;
+  }
+
+  .cs_card.cs_style_9 p {
+    font-size: 12px !important;
+  }
+
+  /* ===== PATIENT STORIES / GALLERY ===== */
+  .cs_case_study.cs_style_1 .cs_case_study_title {
+    font-size: 16px !important;
+  }
+
+  .cs_case_study.cs_style_1 .cs_case_study_subtitle {
+    font-size: 12px !important;
+  }
+
+  /* ===== GENERAL PAGE CONTENT TEXT ===== */
+  .cs_department_details h2 {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_department_details h3 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cs_department_details p {
+    font-size: 13px !important;
+    line-height: 1.6em !important;
+    margin-bottom: 10px !important;
+  }
+
   /* ===== SCROLL UP BUTTON ===== */
   .cs_scrollup {
     width: 36px !important;
@@ -1484,6 +1786,11 @@ table th {
 
   .cs_hero_title_mini {
     font-size: 10px !important;
+  }
+
+  .cs_hero_btns .cs_btn.cs_style_1 {
+    padding: 8px 14px !important;
+    font-size: 11px !important;
   }
 
   /* Stats */
