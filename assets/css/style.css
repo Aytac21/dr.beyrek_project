@@ -11698,7 +11698,38 @@ Pricing controller
   line-height: 1.7;
 }
 
-/* 0b. Header gap fix */
+/* 0b. Header nav fit at mid-desktop (1200-1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .cs_nav .cs_nav_list > li {
+    margin-right: 18px !important;
+  }
+  .cs_nav.cs_fs_18 {
+    font-size: 15px !important;
+  }
+  .cs_main_header_right .cs_btn {
+    padding: 10px 18px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* 0c. Mobile menu: hover/active link color fix */
+@media (max-width: 1199px) {
+  .cs_nav .cs_nav_list a:hover,
+  .cs_nav .cs_nav_list li.active > a {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+}
+
+/* 0c. Service card icon: emoji/img visible on hover */
+.cs_iconbox.cs_style_8:hover .cs_iconbox_icon {
+  background-color: #fff;
+  border-radius: 50%;
+}
+.cs_iconbox.cs_style_8:hover .cs_iconbox_icon::after {
+  opacity: 0 !important;
+}
+
+/* 0d. Header gap fix */
 .cs_site_header,
 .cs_main_header {
   border-bottom: none !important;
