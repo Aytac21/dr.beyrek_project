@@ -184,94 +184,156 @@ table th {
 }
 
 
+/* --- SELECT2 DROPDOWN FIX (global) --- */
+.select2-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.select2-container .select2-selection--single {
+  overflow: hidden !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50% !important;
+  transform: translateY(-50%);
+  right: 12px !important;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  transform: translateY(-50%) rotateX(180deg);
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 32px !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
 /* --- 3. MOBILE RESPONSIVENESS FIXES --- */
 
 /* ---- Tablets (max-width: 991px) ---- */
 @media (max-width: 991px) {
   body, html {
     font-size: 15px;
-    line-height: 1.65em;
+    line-height: 1.6em;
   }
 
-  h1 { font-size: 36px; }
-  h2 { font-size: 30px; }
-  h3 { font-size: 24px; }
-  h4 { font-size: 20px; }
-  h5 { font-size: 17px; }
-  h6 { font-size: 15px; }
+  h1 { font-size: 30px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 18px; }
+  h5 { font-size: 16px; }
+  h6 { font-size: 14px; }
 
-  /* Prevent horizontal overflow */
+  /* Overflow prevention */
   .container,
   .container-fluid {
     overflow-x: hidden;
   }
 
-  /* Section spacing reduction */
-  .cs_height_140 { height: 80px !important; }
-  .cs_height_150 { height: 85px !important; }
-  .cs_height_120 { height: 70px !important; }
+  section {
+    overflow: hidden;
+  }
 
-  /* Better section heading on tablet */
+  /* Section spacing */
+  .cs_height_150 { height: 60px !important; }
+  .cs_height_140 { height: 55px !important; }
+  .cs_height_120 { height: 50px !important; }
+  .cs_height_100 { height: 40px !important; }
+  .cs_height_80 { height: 35px !important; }
+  .cs_height_50 { height: 25px !important; }
+
+  /* Gap reductions */
+  .cs_gap_y_100 { gap: 40px 0; }
+  .cs_gap_y_80 { gap: 35px 0; }
+  .cs_gap_y_65 { gap: 30px 0; }
+  .cs_gap_y_60 { gap: 25px 0; }
+  .cs_gap_y_40 { gap: 20px 0; }
+
+  /* Section heading */
   .cs_section_heading.cs_style_1.cs_type_1 {
-    gap: 15px 20px;
+    gap: 12px 16px;
   }
 
-  .cs_section_heading.cs_style_1 .cs_section_heading_left {
-    max-width: 100%;
-  }
-
+  .cs_section_heading.cs_style_1 .cs_section_heading_left,
   .cs_section_heading.cs_style_1 .cs_section_heading_right {
     max-width: 100%;
   }
 
-  /* Hero fixes */
+  /* Hero */
   .cs_hero.cs_style_1 {
-    min-height: 550px;
+    min-height: 450px;
   }
 
-  /* Icon box mobile fix */
+  /* Shapes hide on tablet too */
+  .cs_about_shape_1,
+  .cs_about_shape_2,
+  .cs_about_shape_3,
+  .cs_about_shape_4,
+  .cs_about_shape_5,
+  .cs_about_shape_13,
+  .cs_iconbox_shape {
+    display: none !important;
+  }
+
+  /* Icon box */
   .cs_iconbox.cs_style_1 {
-    padding: 30px 20px;
+    padding: 22px 16px;
     width: 100%;
   }
 
-  /* Newsletter mobile */
+  /* Appointment form */
+  .cs_appointment_form_wrapper.cs_type_1,
+  .cs_appointment_form_wrapper.cs_type_3 {
+    padding: 22px 16px 28px;
+  }
+
+  .cs_appointment_form_wrapper .cs_appointment_heading {
+    font-size: 22px;
+  }
+
+  /* Newsletter */
   .cs_newsletter.cs_style_1 {
-    padding: 30px 15px;
-    gap: 20px;
+    padding: 22px 14px;
+    gap: 16px;
   }
 
-  /* Support box mobile */
+  /* Support box */
   .cs_supportbox {
-    padding: 15px;
+    padding: 14px;
   }
 
-  /* Footer column spacing */
+  /* Footer */
   .cs_footer_row {
-    padding: 60px 0;
-    gap: 30px;
+    padding: 40px 0;
+    gap: 22px;
   }
 
-  /* Gap reductions for mobile */
-  .cs_gap_y_80 { gap: 50px 0; }
-  .cs_gap_y_100 { gap: 60px 0; }
-  .cs_gap_y_65 { gap: 40px 0; }
-  .cs_gap_y_60 { gap: 35px 0; }
-
-  /* Process circles - smaller on tablet */
+  /* Process circles */
   .cs_working_process_grid.cs_style_1 {
     min-height: auto !important;
-    gap: 20px;
+    gap: 14px;
   }
 
   .cs_process_item {
-    width: 180px !important;
-    height: 180px !important;
-    padding: 15px !important;
+    width: 140px !important;
+    height: 140px !important;
+    padding: 12px !important;
   }
 
   .cs_process_item .cs_process_title {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -281,28 +343,36 @@ table th {
     font-size: 14px;
   }
 
-  h1 { font-size: 30px; }
-  h2 { font-size: 26px; }
-  h3 { font-size: 22px; }
-  h4 { font-size: 18px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
 
-  /* Large font size classes - aggressive reduction */
-  .cs_fs_96 { font-size: 36px !important; line-height: 1.2em !important; }
-  .cs_fs_100 { font-size: 38px !important; line-height: 1.15em !important; }
-  .cs_fs_72 { font-size: 34px !important; line-height: 1.2em !important; }
-  .cs_fs_70 { font-size: 32px !important; line-height: 1.2em !important; }
-  .cs_fs_64 { font-size: 30px !important; line-height: 1.2em !important; }
-  .cs_fs_48 { font-size: 26px !important; line-height: 1.25em !important; }
-  .cs_fs_40 { font-size: 24px !important; line-height: 1.3em !important; }
-  .cs_fs_36 { font-size: 22px !important; line-height: 1.35em !important; }
-  .cs_fs_32 { font-size: 20px !important; line-height: 1.35em !important; }
-  .cs_fs_30 { font-size: 19px !important; line-height: 1.4em !important; }
-  .cs_fs_28 { font-size: 18px !important; line-height: 1.4em !important; }
-  .cs_fs_24 { font-size: 17px !important; line-height: 1.4em !important; }
-  .cs_fs_20 { font-size: 16px !important; }
-  .cs_fs_18 { font-size: 15px !important; }
+  /* Font size classes - aggressive compact */
+  .cs_fs_96 { font-size: 28px !important; line-height: 1.2em !important; }
+  .cs_fs_100 { font-size: 30px !important; line-height: 1.15em !important; }
+  .cs_fs_72 { font-size: 26px !important; line-height: 1.2em !important; }
+  .cs_fs_70 { font-size: 24px !important; line-height: 1.2em !important; }
+  .cs_fs_64 { font-size: 22px !important; line-height: 1.2em !important; }
+  .cs_fs_48 { font-size: 20px !important; line-height: 1.25em !important; }
+  .cs_fs_42 { font-size: 18px !important; line-height: 1.3em !important; }
+  .cs_fs_40 { font-size: 18px !important; line-height: 1.3em !important; }
+  .cs_fs_36 { font-size: 17px !important; line-height: 1.35em !important; }
+  .cs_fs_32 { font-size: 16px !important; line-height: 1.35em !important; }
+  .cs_fs_30 { font-size: 15px !important; line-height: 1.4em !important; }
+  .cs_fs_28 { font-size: 15px !important; line-height: 1.4em !important; }
+  .cs_fs_24 { font-size: 14px !important; line-height: 1.4em !important; }
+  .cs_fs_20 { font-size: 14px !important; }
+  .cs_fs_18 { font-size: 13px !important; }
+  .cs_fs_14 { font-size: 13px !important; }
 
-  /* Overflow prevention */
+  /* ===== HEADER LOGO - smaller on mobile ===== */
+  .cs_site_branding img {
+    max-height: 38px !important;
+    padding: 2px 5px !important;
+  }
+
+  /* ===== GLOBAL OVERFLOW PREVENTION ===== */
   section,
   .container,
   .container-fluid,
@@ -310,32 +380,135 @@ table th {
     overflow-x: hidden;
   }
 
-  /* Hero section mobile */
+  section {
+    overflow: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  section.position-relative {
+    overflow: hidden !important;
+  }
+
+  .container,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .row {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ===== GLOBAL SPACING - very compact ===== */
+  .cs_height_150 { height: 40px !important; }
+  .cs_height_140 { height: 40px !important; }
+  .cs_height_120 { height: 35px !important; }
+  .cs_height_100 { height: 30px !important; }
+  .cs_height_80 { height: 25px !important; }
+  .cs_height_70 { height: 20px !important; }
+  .cs_height_60 { height: 20px !important; }
+  .cs_height_50 { height: 15px !important; }
+  .cs_height_40 { height: 12px !important; }
+  .cs_height_30 { height: 10px !important; }
+  .cs_height_20 { height: 8px !important; }
+
+  .cs_height_lg_80 { height: 30px !important; }
+  .cs_height_lg_40 { height: 15px !important; }
+  .cs_height_lg_30 { height: 10px !important; }
+  .cs_height_lg_20 { height: 8px !important; }
+
+  /* Gap reductions */
+  .cs_gap_y_100 { gap: 20px 0 !important; }
+  .cs_gap_y_80 { gap: 18px 0 !important; }
+  .cs_gap_y_65 { gap: 16px 0 !important; }
+  .cs_gap_y_60 { gap: 15px 0 !important; }
+  .cs_gap_y_40 { gap: 14px 0 !important; }
+  .cs_gap_y_30 { gap: 10px 0 !important; }
+
+  .cs_row_gap_40,
+  .cs_row_gap_50,
+  .cs_row_gap_60 {
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .cs_row_gap_40 > *,
+  .cs_row_gap_50 > *,
+  .cs_row_gap_60 > * {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  /* ===== DECORATIVE SHAPES - hide on mobile ===== */
+  .cs_about_shape_1,
+  .cs_about_shape_2,
+  .cs_about_shape_3,
+  .cs_about_shape_4,
+  .cs_about_shape_5,
+  .cs_about_shape_13,
+  .cs_iconbox_shape {
+    display: none !important;
+  }
+
+  /* ===== HERO SECTION ===== */
   .cs_hero.cs_style_1 {
-    min-height: 450px;
-    max-height: 600px;
-    padding: 100px 0 60px;
+    min-height: 350px !important;
+    max-height: 500px;
+    padding: 80px 0 40px !important;
   }
 
   .cs_hero_content {
     max-width: 100% !important;
   }
 
+  .cs_hero_title_mini {
+    font-size: 11px !important;
+    line-height: 1.4em !important;
+    margin-bottom: 6px !important;
+  }
+
   .cs_hero_subtitle {
-    font-size: 15px;
-    line-height: 1.6em;
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    margin-bottom: 12px !important;
   }
 
-  .cs_hero_btn_group {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+  .cs_hero_btn_group,
+  .cs_hero_btns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
   }
 
-  /* Hero contact list - stack on mobile */
+  .cs_hero_btns {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .cs_hero_patientbox,
+  .cs_scroll_more_btn {
+    display: none !important;
+  }
+
   .cs_hero_contact_list {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
   }
 
   .cs_hero_contact_list li:not(:last-child) {
@@ -343,139 +516,274 @@ table th {
     padding-right: 0;
     margin-right: 0;
     border-bottom: 1px solid rgba(0,0,27,0.1);
-    padding-bottom: 10px;
+    padding-bottom: 6px;
   }
 
-  /* Buttons - full width on small screens */
+  /* ===== BUTTONS ===== */
   .cs_btn.cs_style_1 {
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 10px 18px !important;
+    font-size: 13px !important;
   }
 
-  /* Page heading */
+  /* ===== PAGE HEADING ===== */
   .cs_page_heading {
-    min-height: 200px !important;
-    padding: 100px 15px 30px !important;
+    min-height: 160px !important;
+    padding: 80px 12px 20px !important;
   }
 
-  .cs_page_heading .cs_page_title {
-    font-size: 26px !important;
-    line-height: 1.3em;
+  .cs_page_heading .cs_page_title,
+  .cs_page_heading_title.cs_fs_48 {
+    font-size: 18px !important;
+    line-height: 1.3em !important;
   }
 
-  /* About section thumbnail */
+  .cs_page_heading .breadcrumb {
+    font-size: 12px !important;
+  }
+
+  /* ===== SECTION HEADINGS ===== */
+  .cs_section_heading.cs_style_1 .cs_section_subtitle {
+    font-size: 12px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cs_section_heading.cs_style_1 .cs_section_title {
+    margin-bottom: 0 !important;
+  }
+
+  .cs_section_heading.cs_style_1.cs_type_1 {
+    gap: 10px 15px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .cs_section_heading.cs_style_1 .cs_section_heading_left,
+  .cs_section_heading.cs_style_1 .cs_section_heading_right {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* ===== ABOUT SECTION ===== */
+  .cs_about.cs_style_1 {
+    overflow: hidden !important;
+  }
+
   .cs_about.cs_style_1 .cs_about_thumbnail {
     margin-right: 0;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
   }
 
-  /* Iconbox grid */
+  .cs_about.cs_style_1 .cs_about_text .cs_list li {
+    font-size: 13px !important;
+    line-height: 1.5em !important;
+  }
+
+  .cs_about.cs_style_1 .cs_about_text .cs_list li svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+  }
+
+  /* ===== ICONBOX cs_style_1 (general cards) ===== */
   .cs_iconbox.cs_style_1 {
-    padding: 25px 16px;
+    padding: 16px 12px !important;
   }
 
   .cs_iconbox.cs_style_1 .cs_iconbox_header {
-    gap: 12px;
-    flex-direction: column;
-    text-align: center;
+    gap: 8px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
   }
 
   .cs_iconbox.cs_style_1 .cs_iconbox_icon {
-    width: 60px;
-    height: 60px;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
   }
 
-  /* Post cards - better mobile */
-  .cs_post.cs_style_1.cs_type_2 .cs_post_info {
-    padding: 15px 16px 24px;
+  .cs_iconbox.cs_style_1 .cs_iconbox_title {
+    font-size: 15px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 2px !important;
   }
 
-  .cs_post.cs_style_1.cs_type_2 .cs_post_meta_wrapper {
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    font-size: 13px;
+  .cs_iconbox.cs_style_1 .cs_iconbox_subtitle {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
   }
 
-  /* Footer mobile */
-  .cs_footer_row {
-    padding: 50px 0;
-    gap: 25px;
+  .cs_iconbox.cs_style_1 p {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    margin-bottom: 6px !important;
   }
 
-  .cs_footer_row .cs_footer_col {
-    width: 100% !important;
+  .cs_iconbox.cs_style_1[style*="padding: 30px"],
+  .cs_iconbox.cs_style_1[style*="padding: 35px 30px"],
+  .cs_iconbox.cs_style_1[style*="padding: 35px"] {
+    padding: 14px 12px !important;
   }
 
-  .cs_footer_bottom_in {
-    padding: 20px 0;
-    gap: 10px;
-    text-align: center;
+  .cs_iconbox.cs_style_1 .cs_iconbox_header div[style*="font-size: 40px"] {
+    font-size: 22px !important;
+    min-width: 28px !important;
+    margin-bottom: 0 !important;
   }
 
-  .cs_footer_bottom_in .cs_footer_widget_menu {
-    justify-content: center;
-    gap: 4px 16px;
-    font-size: 13px;
+  div[style*="font-size: 40px"] {
+    font-size: 22px !important;
+    margin-bottom: 6px !important;
   }
 
-  /* Newsletter mobile */
-  .cs_newsletter.cs_style_1 {
-    padding: 25px 12px;
-    gap: 15px;
+  /* ===== ICONBOX cs_style_3 (appointment info boxes) ===== */
+  .cs_iconbox.cs_style_3 {
+    gap: 10px !important;
+    margin-bottom: 10px !important;
   }
 
-  .cs_newsletter.cs_style_1 .cs_newsletter_left {
-    gap: 15px;
+  .cs_accent_bg .row.cs_gap_y_40 {
+    gap: 24px 0 !important;
   }
 
-  /* Contact/appointment forms */
+  .cs_iconbox.cs_style_3 .cs_iconbox_icon {
+    width: 36px !important;
+    min-width: 36px !important;
+    height: 36px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_icon img {
+    width: 20px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_title {
+    font-size: 14px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_subtitle {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+  }
+
+  /* ===== ICONBOX cs_style_8 (services.html cards) ===== */
+  .cs_iconbox.cs_style_8 {
+    padding: 14px 12px !important;
+  }
+
+  .cs_iconbox.cs_style_8 .cs_iconbox_icon {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 18px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cs_iconbox.cs_style_8 .cs_iconbox_title {
+    font-size: 15px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cs_iconbox.cs_style_8 .cs_iconbox_subtitle {
+    font-size: 12px !important;
+    line-height: 1.4em !important;
+  }
+
+  /* ===== SELECT2 DROPDOWN ARROW - always visible ===== */
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+    transform: translateY(-50%) rotateX(180deg) !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow b::after {
+    font-size: 12px !important;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: 30px !important;
+  }
+
+  /* ===== APPOINTMENT FORM - compact ===== */
+  .cs_accent_bg .col-lg-6 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
   .cs_appointment_form_wrapper.cs_type_1,
   .cs_appointment_form_wrapper.cs_type_3 {
     margin-left: 0;
-    padding: 25px 15px 30px;
+    margin-right: 0;
+    padding: 20px 16px 24px !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .cs_appointment_form_wrapper .cs_appointment_heading {
-    font-size: 24px;
+    font-size: 18px !important;
+    margin-bottom: 16px !important;
   }
 
   .cs_appointment_form_wrapper.cs_type_2 .cs_appointment_form {
-    padding: 30px 15px;
+    padding: 16px 12px !important;
   }
 
-  /* Video section mobile */
-  .cs_video_section.cs_style_2 {
-    min-height: 500px;
+  .cs_appointment_form.cs_gap_y_30 {
+    gap: 16px 0 !important;
   }
 
-  .cs_video_section.cs_style_3 {
-    min-height: 500px;
-    padding: 130px 0 0;
-  }
-
-  .cs_vider_wrapper.cs_style_1 {
-    padding: 30px 15px !important;
-  }
-
-  .cs_vider_wrapper.cs_style_1 .cs_video_title {
-    font-size: 24px !important;
-  }
-
-  /* Counter section */
-  .cs_counter.cs_style_1 {
-    text-align: center;
-  }
-
-  /* ===== STATISTICS BLOCKS - compact on mobile ===== */
-  .cs_department.cs_style_1 .row.cs_row_gap_30 .col-xl-3 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
+  .cs_appointment_form .col-md-6,
+  .cs_appointment_form .col-md-12 {
     padding-left: 6px !important;
     padding-right: 6px !important;
   }
 
+  .cs_form_field_wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  .cs_form_field {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+    min-height: auto !important;
+  }
+
+  .cs_form_field_wrapper .cs_select,
+  .cs_form_field_wrapper select {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .cs_appointment_form textarea.cs_form_field {
+    min-height: 60px !important;
+    max-height: 80px !important;
+  }
+
+  /* ===== STATISTICS / DEPARTMENT BLOCKS ===== */
+  .cs_department.cs_style_1 .row.cs_row_gap_30 .col-xl-3,
+  .cs_department.cs_style_1 .row.cs_row_gap_30 .col-xl-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
   .cs_department.cs_style_1 .cs_iconbox.cs_style_1 {
-    padding: 18px 10px !important;
+    padding: 12px 8px !important;
     min-height: auto !important;
   }
 
@@ -484,509 +792,836 @@ table th {
   }
 
   .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_iconbox_title {
-    font-size: 22px !important;
+    font-size: 18px !important;
     line-height: 1.2em !important;
     margin-bottom: 2px !important;
   }
 
   .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_fs_20 {
-    font-size: 13px !important;
+    font-size: 12px !important;
     line-height: 1.3em !important;
-    margin-top: 6px !important;
+    margin-top: 4px !important;
     margin-bottom: 0 !important;
   }
 
   .cs_department.cs_style_1 .row.cs_row_gap_30.cs_gap_y_30 {
-    row-gap: 12px !important;
+    row-gap: 8px !important;
   }
 
-  /* ===== PROCESS CIRCLES - smaller on mobile ===== */
+  /* ===== SERVICE LINK CARDS (Xidmətlər section) ===== */
+  a.cs_iconbox.cs_style_1 {
+    padding: 14px 10px !important;
+  }
+
+  a.cs_iconbox.cs_style_1 p[style*="font-size: 14px"] {
+    font-size: 11px !important;
+    line-height: 1.4em !important;
+    margin-top: 4px !important;
+  }
+
+  /* ===== PROCESS CIRCLES - 2 per row ===== */
   .cs_working_process_grid.cs_style_1 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 16px !important;
     min-height: auto !important;
+    justify-items: center !important;
+  }
+
+  .cs_working_process_grid.cs_style_1::before,
+  .cs_working_process_grid.cs_style_1::after {
+    display: none !important;
   }
 
   .cs_process_item {
-    width: 140px !important;
-    height: 140px !important;
-    padding: 12px !important;
-  }
-
-  .cs_process_item .cs_process_iten_inner {
+    width: 120px !important;
+    height: 120px !important;
     padding: 10px !important;
   }
 
+  .cs_process_item .cs_process_iten_inner {
+    padding: 8px !important;
+  }
+
   .cs_process_item .cs_process_title {
-    font-size: 13px !important;
+    font-size: 11px !important;
     line-height: 1.3em !important;
   }
 
-  /* ===== GENERAL SECTION SPACING - tighter on mobile ===== */
-  .cs_height_120 {
-    height: 50px !important;
+  /* ===== KLINIKALAR SECTION (index) ===== */
+  div[style*="display: flex; flex-wrap: wrap; gap: 20px"] {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
   }
 
-  .cs_height_50 {
-    height: 25px !important;
+  div[style*="flex: 1 1 220px"],
+  div[style*="flex: 1 1 220px; max-width: 260px"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
   }
 
-  /* ===== SERVICE ICONBOXES - compact grid ===== */
-  .cs_iconbox.cs_style_1 .cs_iconbox_title {
+  /* Klinikalar flex container */
+  div[style*="display: flex; flex-wrap: wrap; gap: 20px"] {
+    gap: 12px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] {
+    padding: 14px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] .cs_fs_20 {
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] p[style*="font-size: 14px"] {
+    font-size: 11px !important;
+    margin-bottom: 2px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] p {
+    margin-bottom: 2px !important;
+  }
+
+  div[style*="margin-bottom: 15px"] {
+    margin-bottom: 8px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  div[style*="margin-bottom: 15px"] svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* ===== CTA SECTION ===== */
+  section[style*="padding: 60px"] {
+    padding: 20px 0 !important;
+  }
+
+  section[style*="padding: 60px"] .cs_fs_48 {
+    font-size: 17px !important;
+    line-height: 1.3em !important;
+  }
+
+  section[style*="padding: 60px"] p[style*="font-size: 18px"] {
+    font-size: 12px !important;
+    line-height: 1.4em !important;
+  }
+
+  section[style*="padding: 60px 0"] .col-lg-4.text-lg-end {
+    text-align: center !important;
+  }
+
+  section[style*="padding: 60px 0"] .cs_btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* ===== TESTIMONIAL ===== */
+  .cs_testimonial.cs_style_1 .cs_testimonial_left {
+    margin-bottom: 10px !important;
+  }
+
+  .cs_testimonial.cs_style_1 .cs_testimonial_thumbnail img {
+    max-height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+
+  .cs_testimonial_subtitle.cs_fs_32 {
+    font-size: 14px !important;
+    line-height: 1.5em !important;
+  }
+
+  .cs_avatar_title.cs_fs_24 {
+    font-size: 14px !important;
+  }
+
+  .cs_avatar_subtitle.cs_fs_18 {
+    font-size: 11px !important;
+  }
+
+  .cs_quote_icon img {
+    width: 24px !important;
+    height: auto !important;
+  }
+
+  .cs_slider_arrows.cs_style_1 {
+    gap: 8px !important;
+  }
+
+  .cs_slider_arrows.cs_style_1 .cs_left_arrow,
+  .cs_slider_arrows.cs_style_1 .cs_right_arrow {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+  }
+
+  /* ===== EXPERIENCE BOX ===== */
+  .cs_experience_box {
+    width: 90px !important;
+    height: 90px !important;
+    padding: 10px !important;
+  }
+
+  .cs_experience_box .cs_experience_box_number {
+    font-size: 20px !important;
+  }
+
+  .cs_experience_box .cs_experience_box_title {
+    font-size: 10px !important;
+  }
+
+  /* ===== BLOG POST CARDS ===== */
+  .cs_post.cs_style_1 .cs_post_title {
+    font-size: 15px !important;
+    line-height: 1.35em !important;
+  }
+
+  .cs_post.cs_style_1 .cs_post_info {
+    padding: 10px 10px 14px !important;
+  }
+
+  .cs_post.cs_style_1 .cs_post_meta {
+    font-size: 11px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cs_post.cs_style_1.cs_type_2 .cs_post_info {
+    padding: 10px 12px 16px !important;
+  }
+
+  .cs_post.cs_style_1.cs_type_2 .cs_post_meta_wrapper {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-size: 11px;
+  }
+
+  .cs_text_btn {
+    font-size: 13px !important;
+  }
+
+  /* ===== FOOTER - compact ===== */
+  .cs_footer_row {
+    padding: 30px 0 !important;
+    gap: 18px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .cs_footer_row > .cs_footer_col {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Keçidlər & Xidmətlər side by side */
+  .cs_footer_row > .cs_footer_col:nth-child(2),
+  .cs_footer_row > .cs_footer_col:nth-child(3) {
+    width: 46% !important;
+    flex: 0 0 46% !important;
+    max-width: 46% !important;
+  }
+
+  .cs_footer_widget_title.cs_fs_32 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cs_footer_widget_menu li {
+    font-size: 13px !important;
+    line-height: 1.8em !important;
+  }
+
+  .cs_phone_number.cs_fs_32 {
     font-size: 18px !important;
   }
 
-  .cs_iconbox.cs_style_1 .cs_iconbox_subtitle {
+  .cs_footer_text_widget img {
+    max-height: 40px !important;
+  }
+
+  .cs_footer_text_widget p {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+  }
+
+  .cs_social_btns.cs_style_1 a {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+
+  .cs_footer_bottom_in {
+    padding: 14px 0 !important;
+    gap: 6px;
+    text-align: center;
+    flex-direction: column !important;
+  }
+
+  .cs_footer_bottom_in .cs_footer_widget_menu {
+    justify-content: center;
+    gap: 4px 12px;
+    font-size: 12px;
+  }
+
+  .cs_copyright {
+    font-size: 12px !important;
+  }
+
+  /* ===== DISEASES PAGE ===== */
+  div[style*="background: #fff3f3"] {
+    padding: 10px 10px !important;
+  }
+
+  div[style*="background: #fff3f3"] div[style*="font-size: 32px"] {
+    font-size: 18px !important;
+    margin-bottom: 4px !important;
+  }
+
+  div[style*="background: #f8f9fa; border-radius: 10px; padding: 30px"] {
+    padding: 12px 10px !important;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+  div[style*="padding: 28px 20px"] {
+    padding: 12px 10px !important;
+  }
+
+  div[style*="padding: 28px 20px"] .cs_fs_20 {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .contact_form_wrapper {
+    padding: 14px 10px !important;
+  }
+
+  .contact_form_wrapper .cs_fs_40 {
+    font-size: 18px !important;
+  }
+
+  /* ===== BLOCKQUOTES - all types ===== */
+  blockquote,
+  blockquote[style*="padding: 20px 30px"],
+  .cs_post_details.cs_style_1 blockquote,
+  .cs_department_details blockquote {
+    padding: 14px 14px !important;
+    font-size: 13px !important;
+    line-height: 1.5em !important;
+    margin: 12px 0 !important;
+    border-radius: 8px !important;
+  }
+
+  blockquote img {
+    width: 24px !important;
+    height: auto !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cs_post_details.cs_style_1 blockquote img {
+    width: 24px !important;
+    min-width: 24px !important;
+    margin-right: 8px !important;
+  }
+
+  blockquote .cs_fs_24 {
     font-size: 13px !important;
     line-height: 1.5em !important;
   }
 
-  /* Pricing cards */
-  .cs_pricing_card {
-    padding: 30px 20px !important;
+  blockquote footer,
+  blockquote small {
+    font-size: 11px !important;
   }
 
-  /* FAQ accordion */
+  /* ===== PRICING CARDS ===== */
+  .cs_pricing_card {
+    padding: 18px 14px !important;
+  }
+
+  /* ===== FAQ ACCORDION ===== */
   .cs_accordion .cs_accordion_title {
-    font-size: 16px;
-    padding: 15px 40px 15px 16px;
+    font-size: 14px;
+    padding: 10px 30px 10px 12px;
   }
 
   .cs_accordion .cs_accordion_body {
-    padding: 0 16px 16px;
+    padding: 0 12px 12px;
+    font-size: 12px;
   }
 
-  /* Team section */
+  .accordion-button {
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+  }
+
+  .accordion-body {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    padding: 8px 12px 12px !important;
+  }
+
+  /* ===== TEAM SECTION ===== */
   .cs_team.cs_style_1 .cs_team_member_name {
-    font-size: 18px;
+    font-size: 15px;
   }
 
-  /* Image overflow prevention */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* ===== SIDEBAR ===== */
+  .cs_sidebar {
+    margin-top: 25px;
   }
 
-  /* Table responsive */
+  .cs_sidebar .cs_btn_list li a {
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+  }
+
+  .cs_card.cs_style_9 {
+    padding: 16px 12px !important;
+  }
+
+  .cs_card.cs_style_9 h3 { font-size: 15px !important; }
+  .cs_card.cs_style_9 h4 { font-size: 14px !important; }
+  .cs_card.cs_style_9 p { font-size: 12px !important; }
+
+  /* ===== CASE STUDIES ===== */
+  .cs_case_study_card .cs_case_study_title {
+    font-size: 16px;
+  }
+
+  /* ===== GALLERY ===== */
+  .cs_gallery_grid { gap: 6px; }
+  .cs_before_after { max-width: 100%; }
+
+  /* ===== TABLE ===== */
   table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Half-screen elements */
+  /* ===== HALF SCREEN ===== */
   .cs_half_screen_right,
   .cs_half_screen_left {
     width: 100% !important;
     margin-left: 0 !important;
   }
 
-  /* Row gap overrides */
-  .cs_row_gap_40,
-  .cs_row_gap_50,
-  .cs_row_gap_60 {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  .cs_row_gap_40 > *,
-  .cs_row_gap_50 > *,
-  .cs_row_gap_60 > * {
-    padding-left: 10px;
-    padding-right: 10px;
+  /* ===== VIDEO SECTION ===== */
+  .cs_video_section.cs_style_2,
+  .cs_video_section.cs_style_3 {
+    min-height: 300px !important;
   }
 
-  /* Sidebar */
-  .cs_sidebar {
-    margin-top: 40px;
+  .cs_video_section.cs_style_3 {
+    padding: 80px 0 0 !important;
   }
 
-  /* Case studies */
-  .cs_case_study_card .cs_case_study_title {
-    font-size: 20px;
+  .cs_vider_wrapper.cs_style_1 {
+    padding: 16px 12px !important;
   }
 
-  /* Gallery spacing */
-  .cs_gallery_grid {
-    gap: 10px;
-  }
-
-  /* Before-after slider */
-  .cs_before_after {
-    max-width: 100%;
-  }
-
-  /* ===== SERVICE CARDS cs_style_8 (services.html) ===== */
-  .cs_iconbox.cs_style_8 {
-    padding: 20px 16px !important;
-  }
-
-  .cs_iconbox.cs_style_8 .cs_iconbox_icon {
-    width: 45px !important;
-    height: 45px !important;
-    font-size: 22px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .cs_iconbox.cs_style_8 .cs_iconbox_title {
-    font-size: 18px !important;
-    line-height: 1.3em !important;
-    margin-bottom: 6px !important;
-  }
-
-  .cs_iconbox.cs_style_8 .cs_iconbox_subtitle {
-    font-size: 13px !important;
-    line-height: 1.5em !important;
-  }
-
-  /* ===== EXPERIENCE BOX (about thumbnail overlay) ===== */
-  .cs_experience_box {
-    width: 120px !important;
-    height: 120px !important;
-    padding: 15px !important;
-  }
-
-  .cs_experience_box .cs_experience_box_number {
-    font-size: 24px !important;
-  }
-
-  .cs_experience_box .cs_experience_box_title {
-    font-size: 12px !important;
-  }
-
-  /* ===== ABOUT PAGE - achievement cards with emojis ===== */
-  .cs_iconbox.cs_style_1[style*="padding: 30px"] {
-    padding: 18px 14px !important;
-  }
-
-  /* ===== CTA SECTION (accent bg call-to-action) ===== */
-  section[style*="padding: 60px"] {
-    padding: 30px 0 !important;
-  }
-
-  section[style*="padding: 60px"] .cs_fs_48 {
-    font-size: 22px !important;
-    line-height: 1.3em !important;
-  }
-
-  section[style*="padding: 60px"] p[style*="font-size: 18px"] {
-    font-size: 14px !important;
-  }
-
-  /* ===== TESTIMONIAL QUOTES ===== */
-  .cs_testimonial_subtitle.cs_fs_32 {
-    font-size: 18px !important;
-    line-height: 1.5em !important;
-  }
-
-  .cs_avatar_title.cs_fs_24 {
-    font-size: 16px !important;
-  }
-
-  .cs_avatar_subtitle.cs_fs_18 {
-    font-size: 13px !important;
-  }
-
-  .cs_quote_icon img {
-    width: 30px !important;
-    height: auto !important;
-  }
-
-  /* ===== DISEASES PAGE - warning signal boxes ===== */
-  div[style*="background: #fff3f3"] {
-    padding: 14px 12px !important;
-  }
-
-  div[style*="background: #fff3f3"] div[style*="font-size: 32px"] {
-    font-size: 22px !important;
-    margin-bottom: 5px !important;
-  }
-
-  /* ===== DISEASES PAGE - iconbox cards ===== */
-  .cs_iconbox.cs_style_1 p {
-    font-size: 13px !important;
-    line-height: 1.55em !important;
-  }
-
-  /* ===== KLINIKALAR SECTION (index - inline flex cards) ===== */
-  div[style*="flex: 1 1 220px"] {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-  }
-
-  div[style*="border-radius: 15px; padding: 30px 20px"] {
-    padding: 20px 14px !important;
-  }
-
-  div[style*="border-radius: 15px; padding: 30px 20px"] .cs_fs_20 {
-    font-size: 16px !important;
-  }
-
-  div[style*="border-radius: 15px; padding: 30px 20px"] p[style*="font-size: 14px"] {
-    font-size: 12px !important;
-  }
-
-  /* ===== CONTACT PAGE - clinic info cards ===== */
-  div[style*="padding: 28px 20px"] {
-    padding: 18px 14px !important;
-  }
-
-  div[style*="padding: 28px 20px"] .cs_fs_20 {
-    font-size: 15px !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* ===== ABOUT PAGE - blockquotes ===== */
-  blockquote[style*="padding: 20px 30px"] {
-    padding: 14px 16px !important;
-  }
-
-  blockquote .cs_fs_24 {
-    font-size: 16px !important;
-    line-height: 1.5em !important;
-  }
-
-  /* ===== FOOTER - compact on mobile ===== */
-  .cs_footer_widget_title.cs_fs_32 {
-    font-size: 20px !important;
-  }
-
-  .cs_footer_widget_menu li {
-    font-size: 14px !important;
-  }
-
-  .cs_phone_number.cs_fs_32 {
-    font-size: 22px !important;
-  }
-
-  .cs_footer_text_widget img {
-    max-height: 45px !important;
-  }
-
-  /* ===== ABOUT PAGE - emoji size in achievement cards ===== */
-  div[style*="font-size: 40px"] {
-    font-size: 28px !important;
-    margin-bottom: 8px !important;
-  }
-
-  /* ===== APPOINTMENT FORM SECTION ===== */
-  .cs_iconbox.cs_style_3 .cs_iconbox_title {
-    font-size: 18px !important;
-    line-height: 1.3em !important;
-  }
-
-  .cs_iconbox.cs_style_3 .cs_iconbox_subtitle {
-    font-size: 13px !important;
-  }
-
-  .cs_iconbox.cs_style_3 .cs_iconbox_icon {
-    width: 50px !important;
-    min-width: 50px !important;
-    height: 50px !important;
-  }
-
-  .cs_iconbox.cs_style_3 .cs_iconbox_icon img {
-    width: 28px !important;
-  }
-
-  /* ===== SIDEBAR SERVICE LIST ===== */
-  .cs_sidebar .cs_btn_list li a {
-    font-size: 14px !important;
-    padding: 12px 16px !important;
-  }
-
-  .cs_card.cs_style_9 {
-    padding: 25px 16px !important;
-  }
-
-  .cs_card.cs_style_9 h3 {
+  .cs_vider_wrapper.cs_style_1 .cs_video_title {
     font-size: 18px !important;
   }
 
-  /* ===== BLOG POST CARDS ===== */
-  .cs_post.cs_style_1 .cs_post_title {
-    font-size: 18px !important;
-    line-height: 1.35em !important;
-  }
-
-  .cs_post.cs_style_1 .cs_post_info {
-    padding: 15px 14px 20px !important;
-  }
-
-  /* ===== FAQ ACCORDION (Bootstrap) ===== */
-  .accordion-button {
-    font-size: 15px !important;
-    padding: 14px 16px !important;
-  }
-
-  .accordion-body {
-    font-size: 13px !important;
-    line-height: 1.6em !important;
-    padding: 10px 16px 16px !important;
-  }
-
-  /* ===== CONTACT FORM WRAPPER ===== */
-  .contact_form_wrapper {
-    padding: 20px 14px !important;
-  }
-
-  .contact_form_wrapper .cs_fs_40 {
-    font-size: 22px !important;
-  }
-
-  /* ===== RISK FACTORS BOX (diseases page) ===== */
-  div[style*="background: #f8f9fa; border-radius: 10px; padding: 30px"] {
-    padding: 18px 14px !important;
-  }
-
-  /* ===== GENERAL - all inline padding: 30px blocks ===== */
-  .cs_iconbox.cs_style_1[style*="padding: 30px"],
-  div[style*="padding: 30px;"] .cs_iconbox.cs_style_1 {
-    padding: 18px 14px !important;
+  /* ===== COUNTER ===== */
+  .cs_counter.cs_style_1 {
+    text-align: center;
   }
 
   /* ===== MAP ===== */
   .cs_location_map iframe {
-    height: 250px !important;
+    height: 200px !important;
   }
 
-  /* ===== HERO SECTION ===== */
-  .cs_hero_patientbox {
-    display: none !important;
+  /* ===== NEWSLETTER ===== */
+  .cs_newsletter.cs_style_1 {
+    padding: 16px 10px !important;
+    gap: 10px !important;
   }
 
-  .cs_scroll_more_btn {
-    display: none !important;
+  .cs_newsletter.cs_style_1 .cs_newsletter_left {
+    gap: 10px;
   }
 
-  .cs_hero_subtitle {
+  /* ===== REPLY FORM ===== */
+  .cs_reply_form .cs_form_field {
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+  }
+
+  /* ===== SERVICE DETAIL PAGE ===== */
+  .cs_service_details h2 {
+    font-size: 20px !important;
+    line-height: 1.25em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_service_details h3 {
+    font-size: 17px !important;
+    line-height: 1.3em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_service_details p {
+    font-size: 13px !important;
+    line-height: 1.6em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cs_service_details .cs_list.cs_style_4 {
+    margin: 8px 0 20px !important;
+  }
+
+  .cs_service_details .cs_list.cs_style_4 li {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 1.5em !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
+  }
+
+  .cs_service_details .cs_list.cs_style_4 li strong {
+    display: block !important;
+    font-size: 14px !important;
+    margin-bottom: 1px !important;
+  }
+
+  .cs_service_details .cs_list.cs_style_4 li i {
+    margin-top: 3px !important;
+    font-size: 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cs_service_details blockquote {
+    padding: 12px 12px 25px !important;
     font-size: 13px !important;
     line-height: 1.5em !important;
+    margin-bottom: 14px !important;
   }
 
-  .cs_hero_title_mini {
-    font-size: 13px !important;
+  .cs_service_details blockquote small {
+    font-size: 11px !important;
+    margin-top: 8px !important;
+  }
+
+  .cs_service_details blockquote img {
+    width: 30px !important;
+    bottom: -14px !important;
+    right: 14px !important;
+  }
+
+  .cs_service_details img {
+    margin-bottom: 14px !important;
+  }
+
+  /* ===== GENERAL LIST FIXES ===== */
+  .cs_list.cs_style_4 { gap: 6px !important; }
+  .cs_list.cs_style_4 li { font-size: 13px !important; line-height: 1.5em !important; }
+  .cs_list.cs_style_4 i { font-size: 12px !important; }
+
+  /* ===== SUPPORT BOX ===== */
+  .cs_supportbox { padding: 10px !important; }
+
+  /* ===== SCROLL UP BUTTON ===== */
+  .cs_scrollup {
+    width: 36px !important;
+    height: 36px !important;
+    right: 10px !important;
+    bottom: 10px !important;
   }
 }
 
 /* ---- Very Small Phones (max-width: 400px) ---- */
 @media (max-width: 400px) {
   body, html {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
-  .cs_fs_96 { font-size: 28px !important; }
-  .cs_fs_100 { font-size: 30px !important; }
-  .cs_fs_72,
-  .cs_fs_70 { font-size: 26px !important; }
-  .cs_fs_64 { font-size: 24px !important; }
-  .cs_fs_48 { font-size: 22px !important; }
-  .cs_fs_40 { font-size: 20px !important; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 16px; }
+  h4 { font-size: 14px; }
 
-  h1 { font-size: 26px; }
-  h2 { font-size: 22px; }
-  h3 { font-size: 19px; }
+  .cs_fs_96 { font-size: 22px !important; }
+  .cs_fs_100 { font-size: 24px !important; }
+  .cs_fs_72, .cs_fs_70 { font-size: 20px !important; }
+  .cs_fs_64 { font-size: 18px !important; }
+  .cs_fs_48 { font-size: 16px !important; }
+  .cs_fs_42, .cs_fs_40 { font-size: 15px !important; }
+  .cs_fs_36 { font-size: 14px !important; }
+  .cs_fs_32 { font-size: 14px !important; }
+  .cs_fs_24 { font-size: 12px !important; }
+  .cs_fs_20 { font-size: 12px !important; }
+  .cs_fs_18 { font-size: 12px !important; }
 
-  /* Header button hide on very small */
+  /* Header button hide */
   .cs_site_header .cs_btn.cs_style_1 {
     display: none;
   }
 
-  /* Tighter padding */
-  .cs_iconbox.cs_style_1 {
-    padding: 20px 12px;
+  /* Spacing even tighter */
+  .cs_height_120 { height: 25px !important; }
+  .cs_height_80 { height: 20px !important; }
+  .cs_height_50 { height: 10px !important; }
+  .cs_height_40 { height: 8px !important; }
+  .cs_height_lg_80 { height: 20px !important; }
+  .cs_height_lg_40 { height: 10px !important; }
+
+  .cs_gap_y_40 { gap: 10px 0 !important; }
+  .cs_gap_y_30 { gap: 8px 0 !important; }
+
+  /* Container */
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
+  /* Iconboxes */
+  .cs_iconbox.cs_style_1 {
+    padding: 12px 8px !important;
+  }
+
+  .cs_iconbox.cs_style_1 .cs_iconbox_icon {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+
+  .cs_iconbox.cs_style_1 .cs_iconbox_title {
+    font-size: 13px !important;
+  }
+
+  .cs_iconbox.cs_style_1 p {
+    font-size: 11px !important;
+  }
+
+  .cs_iconbox.cs_style_1[style*="padding: 30px"],
+  .cs_iconbox.cs_style_1[style*="padding: 35px"] {
+    padding: 10px 8px !important;
+  }
+
+  div[style*="font-size: 40px"] {
+    font-size: 18px !important;
+  }
+
+  /* Iconbox style 3 */
+  .cs_iconbox.cs_style_3 .cs_iconbox_icon {
+    width: 30px !important;
+    min-width: 30px !important;
+    height: 30px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_icon img {
+    width: 16px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_title {
+    font-size: 12px !important;
+  }
+
+  .cs_iconbox.cs_style_3 .cs_iconbox_subtitle {
+    font-size: 11px !important;
+  }
+
+  /* Appointment form */
   .cs_appointment_form_wrapper.cs_type_1,
   .cs_appointment_form_wrapper.cs_type_3 {
-    padding: 20px 10px 25px;
+    padding: 12px 8px 16px !important;
+  }
+
+  .cs_appointment_form_wrapper .cs_appointment_heading {
+    font-size: 15px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cs_form_field {
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .cs_appointment_form textarea.cs_form_field {
+    min-height: 50px !important;
+    max-height: 60px !important;
+  }
+
+  .cs_btn.cs_style_1 {
+    padding: 8px 14px !important;
+    font-size: 12px !important;
   }
 
   /* Page heading */
   .cs_page_heading {
-    min-height: 180px !important;
-    padding: 90px 10px 25px !important;
+    min-height: 130px !important;
+    padding: 70px 8px 16px !important;
   }
 
-  .cs_page_heading .cs_page_title {
-    font-size: 22px !important;
+  .cs_page_heading .cs_page_title,
+  .cs_page_heading_title.cs_fs_48 {
+    font-size: 16px !important;
   }
 
-  /* ===== STATS even smaller on tiny phones ===== */
-  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_iconbox_title {
-    font-size: 18px !important;
-  }
-
-  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_fs_20 {
-    font-size: 12px !important;
-  }
-
-  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 {
-    padding: 14px 8px !important;
-  }
-
-  /* ===== PROCESS CIRCLES even smaller ===== */
-  .cs_process_item {
-    width: 120px !important;
-    height: 120px !important;
-    padding: 8px !important;
-  }
-
-  .cs_process_item .cs_process_title {
+  .cs_page_heading .breadcrumb {
     font-size: 11px !important;
   }
 
-  /* Service cards even tighter */
-  .cs_iconbox.cs_style_8 {
-    padding: 16px 12px !important;
+  /* Hero */
+  .cs_hero.cs_style_1 {
+    min-height: 280px !important;
+    padding: 70px 0 30px !important;
   }
 
-  .cs_iconbox.cs_style_8 .cs_iconbox_title {
-    font-size: 16px !important;
+  .cs_hero_subtitle {
+    font-size: 11px !important;
   }
 
-  .cs_iconbox.cs_style_8 .cs_iconbox_subtitle {
-    font-size: 12px !important;
+  .cs_hero_title_mini {
+    font-size: 10px !important;
   }
 
-  /* Testimonial even smaller */
-  .cs_testimonial_subtitle.cs_fs_32 {
+  /* Stats */
+  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 {
+    padding: 10px 6px !important;
+  }
+
+  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_iconbox_title {
     font-size: 15px !important;
   }
 
-  /* Footer even more compact */
-  .cs_footer_widget_title.cs_fs_32 {
-    font-size: 18px !important;
+  .cs_department.cs_style_1 .cs_iconbox.cs_style_1 .cs_fs_20 {
+    font-size: 10px !important;
   }
+
+  /* Process circles */
+  .cs_process_item {
+    width: 80px !important;
+    height: 80px !important;
+    padding: 6px !important;
+  }
+
+  .cs_process_item .cs_process_title {
+    font-size: 9px !important;
+  }
+
+  /* Service cards */
+  .cs_iconbox.cs_style_8 {
+    padding: 10px 8px !important;
+  }
+
+  .cs_iconbox.cs_style_8 .cs_iconbox_title { font-size: 13px !important; }
+  .cs_iconbox.cs_style_8 .cs_iconbox_subtitle { font-size: 11px !important; }
+
+  /* Klinikalar */
+  div[style*="border-radius: 15px; padding: 30px 20px"] {
+    padding: 10px 8px !important;
+  }
+
+  div[style*="border-radius: 15px; padding: 30px 20px"] svg,
+  div[style*="margin-bottom: 15px"] svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Testimonial */
+  .cs_testimonial_subtitle.cs_fs_32 { font-size: 12px !important; }
+  .cs_quote_icon img { width: 18px !important; }
+
+  .cs_testimonial.cs_style_1 .cs_testimonial_thumbnail img {
+    max-height: 160px !important;
+  }
+
+  /* CTA */
+  section[style*="padding: 60px"] {
+    padding: 14px 0 !important;
+  }
+
+  section[style*="padding: 60px"] .cs_fs_48 {
+    font-size: 14px !important;
+  }
+
+  /* Blog cards */
+  .cs_post.cs_style_1 .cs_post_title { font-size: 13px !important; }
+  .cs_post.cs_style_1 .cs_post_info { padding: 8px 8px 10px !important; }
+
+  /* Footer */
+  .cs_footer_row {
+    padding: 20px 0 !important;
+    gap: 14px !important;
+  }
+
+  .cs_footer_widget_title.cs_fs_32 { font-size: 14px !important; }
+  .cs_footer_widget_menu li { font-size: 12px !important; }
+  .cs_phone_number.cs_fs_32 { font-size: 15px !important; }
+  .cs_footer_text_widget img { max-height: 32px !important; }
+
+  .cs_footer_bottom_in {
+    padding: 10px 0 !important;
+  }
+
+  .cs_copyright { font-size: 11px !important; }
+
+  /* Blockquotes */
+  blockquote[style*="padding: 20px 30px"] {
+    padding: 8px 10px !important;
+  }
+
+  blockquote .cs_fs_24 { font-size: 12px !important; }
 
   /* Accordion */
   .accordion-button {
-    font-size: 13px !important;
-    padding: 12px 14px !important;
+    font-size: 12px !important;
+    padding: 8px 10px !important;
+  }
+
+  .accordion-body {
+    font-size: 11px !important;
+    padding: 6px 10px 10px !important;
   }
 
   /* Contact form */
-  .contact_form_wrapper {
-    padding: 16px 10px !important;
-  }
-
-  /* Hero */
-  .cs_hero_subtitle {
-    font-size: 12px !important;
-  }
-
-  /* CTA section */
-  section[style*="padding: 60px"] .cs_fs_48 {
-    font-size: 18px !important;
-  }
-
-  /* Blog card titles */
-  .cs_post.cs_style_1 .cs_post_title {
-    font-size: 16px !important;
-  }
+  .contact_form_wrapper { padding: 10px 8px !important; }
+  .contact_form_wrapper .cs_fs_40 { font-size: 15px !important; }
 
   /* Modal search */
   .cs_modal_search .cs_modal_search_form {
-    padding: 80px 15px;
+    padding: 60px 10px;
   }
+
+  /* Shapes */
+  .cs_about_shape_1, .cs_about_shape_2, .cs_about_shape_3,
+  .cs_about_shape_4, .cs_about_shape_5, .cs_about_shape_13,
+  .cs_iconbox_shape {
+    display: none !important;
+  }
+
+  /* Scroll up */
+  .cs_scrollup {
+    width: 30px !important;
+    height: 30px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+  }
+
+  /* Sidebar */
+  .cs_card.cs_style_9 { padding: 12px 8px !important; }
+  .cs_card.cs_style_9 h3 { font-size: 13px !important; }
+  .cs_card.cs_style_9 p { font-size: 11px !important; }
+
+  /* Experience box */
+  .cs_experience_box {
+    width: 70px !important;
+    height: 70px !important;
+    padding: 8px !important;
+  }
+  .cs_experience_box .cs_experience_box_number { font-size: 16px !important; }
+  .cs_experience_box .cs_experience_box_title { font-size: 8px !important; }
 }
 
 /* ---- Landscape phones fix ---- */
